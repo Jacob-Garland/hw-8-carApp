@@ -57,6 +57,7 @@ class Truck extends Vehicle {
     // TODO: Check if the vehicle's weight is less than or equal to the truck's towing capacity
     // TODO: If it is, log that the vehicle is being towed
     // TODO: If it is not, log that the vehicle is too heavy to be towed
+    
   }
 
   // DONE TODO: Override the printDetails method from the Vehicle class
