@@ -23,7 +23,9 @@ Then, use the command 'npm install' to install all the dependancies.
 Use the commands 'npm run build' & 'node dist/index.js' will start the program in 
 the command prompt.
 
-Video link to be added >here< later.
+### Youtube Demonstration
+
+[![youtube video cover](https://img.youtube.com/vi/RYKM2cRuVdE/0.jpg)](https://www.youtube.com/watch?v=RYKM2cRuVdE&ab_channel=JGProductions)
 
 ## Credits
 
