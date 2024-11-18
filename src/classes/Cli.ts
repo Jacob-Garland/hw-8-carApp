@@ -394,6 +394,7 @@ class Cli {
           for (let i = 0; i < this.vehicles.length; i++) {
             if (this.vehicles[i].vin === this.selectedVehicleVin && this.vehicles[i] instanceof Truck) {
               this.findVehicleToTow(this.vehicles[i] as Truck);
+              return;
             } else if (this.vehicles[i].vin === this.selectedVehicleVin && this.vehicles[i] instanceof Car) {
               console.log('Only trucks can tow!');
             } else if (this.vehicles[i].vin === this.selectedVehicleVin && this.vehicles[i] instanceof Motorbike) {
