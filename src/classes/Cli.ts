@@ -403,9 +403,12 @@ class Cli {
           for (let i = 0; i < this.vehicles.length; i++) {
             if (this.vehicles[i].vin === this.selectedVehicleVin && this.vehicles[i] instanceof Motorbike) {
               (this.vehicles[i] as Motorbike).wheelie();
+              console.log('Motorbike is doing a wheelie!')
               return;
-          } 
-        }
+            } else {
+              console.log('This vehicle cannot perform a wheelie!');
+            }
+         }
         } else if (answers.action === 'Select or create another vehicle') {
           // start the cli to return to the initial prompt if the user wants to select or create another vehicle
           this.startCli();
