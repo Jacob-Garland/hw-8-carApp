@@ -394,7 +394,10 @@ class Cli {
           for (let i = 0; i < this.vehicles.length; i++) {
             if (this.vehicles[i].vin === this.selectedVehicleVin && this.vehicles[i] instanceof Truck) {
               this.findVehicleToTow(this.vehicles[i] as Truck);
-              return;
+            } else if (this.vehicles[i].vin === this.selectedVehicleVin && this.vehicles[i] instanceof Car) {
+              console.log('Only trucks can tow!');
+            } else if (this.vehicles[i].vin === this.selectedVehicleVin && this.vehicles[i] instanceof Motorbike) {
+              console.log('Only trucks can tow!');
             }
           }
         } else if (answers.action === 'Wheelie') {
@@ -403,12 +406,12 @@ class Cli {
           for (let i = 0; i < this.vehicles.length; i++) {
             if (this.vehicles[i].vin === this.selectedVehicleVin && this.vehicles[i] instanceof Motorbike) {
               (this.vehicles[i] as Motorbike).wheelie();
-              console.log('Motorbike is doing a wheelie!')
-              return;
-            } else {
-              console.log('This vehicle cannot perform a wheelie!');
+            } else if (this.vehicles[i].vin === this.selectedVehicleVin && this.vehicles[i] instanceof Car) {
+              console.log('Only motorbikes can do a wheelie!');
+            } else if (this.vehicles[i].vin === this.selectedVehicleVin && this.vehicles[i] instanceof Truck) {
+              console.log('Only motorbikes can do a wheelie!');
             }
-         }
+          }
         } else if (answers.action === 'Select or create another vehicle') {
           // start the cli to return to the initial prompt if the user wants to select or create another vehicle
           this.startCli();
